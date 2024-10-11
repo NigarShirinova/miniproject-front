@@ -1,0 +1,106 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 200px;
+  background-color: #fff;
+  font-family: 'Afacad Flux';
+
+  img {
+    height: 36px;
+  }
+
+  ul.pages {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+
+    p a{
+      margin: 0;
+      font-size: 22px;
+      font-weight: 450;
+      color: #1a2b48;
+      cursor: pointer;
+      position: relative;
+
+      &:hover {
+        color: #dc3545;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #ff0000;
+        transition: width 0.3s;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+      }
+
+      &:hover:after {
+        width: 100%;
+      }
+    }
+  }
+
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+
+    span {
+      width: 30px;
+      height: 3px;
+      background-color: #1a2b48;
+      transition: background-color 0.3s;
+    }
+
+    &:hover span {
+      background-color: #dc3545;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 30px 100px;
+
+    ul.pages {
+      gap: 30px;
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 50px;
+
+    ul.pages {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    &.menu-open ul.pages {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background-color: #fff;
+      padding: 20px 0;
+      gap: 20px;
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+}

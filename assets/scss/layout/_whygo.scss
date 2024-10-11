@@ -1,0 +1,55 @@
+.whygo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    height: 600px;
+    background: url('https://preview.colorlib.com/theme/anipat/img/banner/contact_bg.png') no-repeat;  
+    text-align: center;
+    background-size: contain;
+    font-family: 'Afacad Flux';
+    width: 100%;
+    justify-content: center;
+    
+        .why{
+            font-weight: 600;
+            font-size: 80px ;
+            color: aliceblue;
+            margin: 0 auto;
+            justify-content: center;
+            
+        }
+        .context{
+            width: 50%;
+            margin-top: 40px;
+            line-height: 1.5;
+            font-weight: 300;
+            font-size: 30px;
+            color: aliceblue;
+        }
+        p{
+            color: aliceblue;
+            font-size: 20px;
+            b{
+                font-weight: 600;
+            }
+        }
+        button {
+            font-family: 'Afacad Flux';
+          background-color: white;
+          color: #dc3545; 
+          font-size: 18px;
+          padding: 18px 60px;
+          border: none;
+          border-radius: 30px;
+          cursor: pointer;
+          margin-bottom: 2px;
+          transition: background-color 0.3s ease;
+          margin-top: 25px;
+          &:hover {
+            background-color: red;
+            color: white;
+          }
+        }
+    }

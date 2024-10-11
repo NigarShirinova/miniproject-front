@@ -1,0 +1,73 @@
+.care-part {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px;
+    height: 610px;
+    background: url('https://preview.colorlib.com/theme/anipat/img/banner/banner.png.webp') no-repeat;  
+    overflow: visible;
+    background-size: contain;
+    font-family: 'Afacad Flux';
+    
+
+    p {
+      margin: 0;
+      padding-left: 200px;
+      color: white;
+      font-family: 'Afacad Flux';
+      font-weight: 100;
+      &:first-child {
+        font-size: 90px;
+      }
+  
+      &:nth-child(2) {
+        font-size: 90px;
+        font-weight:900;
+        margin: 10px 0;
+      }
+  
+      &:nth-child(3) {
+        font-size: 20px;
+        width: 50%;
+        line-height: 1;
+        margin-bottom: 20px;
+        font-weight: 300;
+      }
+      &:nth-child(4) {
+        font-size: 20px;
+        width: 50%;
+        font-weight: 300;
+        line-height: 1;
+        margin-bottom: 20px;
+      }
+    }
+  
+    button {
+        font-family: 'Afacad Flux';
+      background-color: white;
+      color: #dc3545; 
+      font-size: 18px;
+      padding: 18px 60px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-left: 200px;
+      margin-top: 25px;
+      &:hover {
+        background-color: red;
+        color: white;
+      }
+    }
+  
+    img {
+      position: absolute;
+      bottom: -300px;
+      right: 120px;
+      width: 800px; 
+      
+    }
+
+  }
+  

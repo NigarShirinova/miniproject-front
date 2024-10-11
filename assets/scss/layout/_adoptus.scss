@@ -1,0 +1,188 @@
+// Variables
+$primary-color: #ff5722;
+$secondary-color: #191D34;
+$font-color: #555;
+$background-color: #f9f9f9;
+$border-radius: 20px;
+$box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+$vertical-shift: 30px;
+
+// Breakpoints
+$tablet-breakpoint: 1024px;
+$mobile-breakpoint: 600px;
+
+.content {
+    margin-top: 300px;
+    @media (max-width: $tablet-breakpoint) {
+        margin-top: 200px;
+    }
+    @media (max-width: $mobile-breakpoint) {
+        margin-top: 100px;
+    }
+}
+
+h2 {
+    font-family: 'Afacad Flux';
+    color: $secondary-color;
+    font-size: 70px;
+    font-weight: 200;
+    margin-bottom: 16px;
+    padding-left: 0px;
+
+    strong {
+        font-weight: 800;
+    }
+
+    @media (max-width: $tablet-breakpoint) {
+        font-size: 50px;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+        font-size: 40px;
+    }
+}
+
+p {
+    font-family: 'Afacad Flux';
+    color: $font-color;
+    font-size: 20px;
+    line-height: 1.6;
+
+    @media (max-width: $mobile-breakpoint) {
+        font-size: 18px;
+    }
+}
+
+a {
+    font-family: 'Afacad Flux';
+    text-decoration: none;
+}
+
+.adopt-section {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    gap: 10px;
+
+    @media (max-width: $tablet-breakpoint) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .content {
+        max-width: 400px;
+    }
+
+    .container {
+        display: flex;
+        gap: 40px;
+
+        @media (max-width: $mobile-breakpoint) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    .contact-btn {
+        display: inline-block;
+        padding: 15px 40px;
+        background: linear-gradient(to right, $primary-color, darken($primary-color, 10%));
+        color: white;
+        border-radius: $border-radius;
+        font-size: 20px;
+        margin-top: 20px;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background: darken($primary-color, 15%);
+        }
+
+        @media (max-width: $tablet-breakpoint) {
+            padding: 12px 30px;
+            font-size: 18px;
+        }
+
+        @media (max-width: $mobile-breakpoint) {
+            padding: 10px 25px;
+            font-size: 16px;
+        }
+    }
+
+    // Card containers
+
+    .card-container1, .card-container2 {
+        text-align: center;
+        margin-top: 300px;
+        display: flex;
+        justify-content: space-around;
+        gap: 50px;
+
+        @media (max-width: $tablet-breakpoint) {
+            display: none;
+        }
+
+        @media (max-width: $mobile-breakpoint) {
+            flex-direction: column;
+            margin-top: 50px;
+            gap: 20px;
+            padding-left: 0;
+        }
+    }
+
+    .card-container2 {
+        display: block;
+        
+    }
+
+    .card-container1{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        height: 50%;
+        margin-top: 350px;
+    }
+    .card {
+        display: block;
+        text-align: center;
+        margin-top: 40px;
+        background-color: white;
+        border-radius: $border-radius;
+        padding: 30px 70px;
+        box-shadow: $box-shadow;
+        flex: 1;
+
+        img {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 15px;
+        }
+
+        .number1, .number, .plus {
+            font-size: 80px;
+            font-weight: bold;
+            color: $secondary-color;
+
+            @media (max-width: $tablet-breakpoint) {
+                font-size: 60px;
+            }
+
+            @media (max-width: $mobile-breakpoint) {
+                font-size: 40px;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}

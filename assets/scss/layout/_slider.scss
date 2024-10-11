@@ -1,0 +1,77 @@
+.slider-container {
+    max-width: 1000px;
+    margin: 200px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+    .slider {
+        display: flex;
+        transition: transform 0.4s ease-in-out;
+
+        .slide {
+            min-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            padding-left: 30px;
+            padding-right: 30px;
+
+            opacity: 0.3;
+            transition: opacity 0.4s ease-in-out;
+
+            &.active {
+                opacity: 1;
+            }
+
+            .profile-img {
+                border-radius: 50%;
+                margin-right: 20px;
+                width: 200px;
+                height: 200px;
+            }
+
+            .testimonial-content {
+                font-family: 'Afacad Flux';
+                h3 {
+                    font-size: 25px;
+                    margin-bottom: 5px;
+                    font-weight: 600;
+                }
+                h4 {
+                    font-size: 20px;
+                    color: gray;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 26px;
+                    color: #666;
+                }
+            }
+        }
+    }
+
+    .navigation {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 0 20px;
+
+        .nav-button {
+            cursor: pointer;
+            font-size: 24px;
+            color: black;
+
+            &:hover {
+                color: #333;
+            }
+        }
+    }
+}
