@@ -1,7 +1,7 @@
 import { API_BASE_URL, endpoints } from "./constants.js";
-import { getAllData, postData } from "./helpers.js";
+import { getAllData, postData } from "./details.js";
 
-const registerForm = document.querySelector("#register-form");
+const registerForm = document.querySelector(".register-form");
 
 const users = await getAllData(API_BASE_URL, endpoints.users);
 

@@ -1,9 +1,12 @@
 window.addEventListener('scroll', function () {
     var headerBottom = document.querySelector('.main-header');
-    if (window.scrollY > 400) {
-        headerBottom.classList.add('fixed');
+    if (window.scrollY > 600) {
+        headerBottom.style.position = 'fixed';  
+        headerBottom.style.top = '0'; 
+        headerBottom.style.width = '80%';  
     } else {
-        headerBottom.classList.remove('fixed');
+        headerBottom.style.position = ''; 
+        headerBottom.style.top = '';
+        headerBottom.style.width = '';
     }
 });
-

@@ -12,11 +12,12 @@
     
 
     p {
-      margin: 0;
+      
       padding-left: 200px;
       color: white;
       font-family: 'Afacad Flux';
       font-weight: 100;
+      line-height: 90px;
       &:first-child {
         font-size: 90px;
       }
@@ -24,7 +25,7 @@
       &:nth-child(2) {
         font-size: 90px;
         font-weight:900;
-        margin: 10px 0;
+        margin-bottom: 50px;
       }
   
       &:nth-child(3) {

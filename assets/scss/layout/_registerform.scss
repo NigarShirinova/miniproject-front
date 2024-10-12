@@ -1,0 +1,63 @@
+.register{
+    text-align: center;
+    margin-top: 100px;
+    img{
+        width: 400px;
+        margin: 0 auto;
+        background-color: white;
+    }
+}
+.register-form{
+    padding-top: 10px;
+    font-family: 'Afacad Flux';
+    font-size: 30px;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 10px;
+    text-align: center;
+    color:#191D34;
+    font-weight: 500;
+    margin-bottom: 200px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+    input{
+
+        background-color: #FF7B3D;
+        color:#191D34;
+        border: none;
+        border-radius: 5px;
+        margin: 12px;
+        width: 60%;
+        margin-left: 20px;
+        height: 35px;
+        font-size: 24px;
+        &:focus{
+            border: 1px solid #191D34;
+        }
+    }
+
+    label{
+        margin: 6px;
+    }
+
+    button{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 25%;
+        height: 50px;
+        border-radius: 20px;
+        background-color: #191D34;
+        color:#FF7B3D;
+        font-size: 25px;
+        font-weight: 900;
+        border:none;
+        &:hover{
+            background-color: #FF7B3D;
+            color:#191D34
+        }
+    }
+
+    
+
+
+}

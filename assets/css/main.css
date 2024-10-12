@@ -38,6 +38,12 @@ footer, header, hgroup, main, menu, nav, section {
 body {
   line-height: 1;
 }
+body::-moz-selection {
+  color: grey;
+}
+body::selection {
+  color: grey;
+}
 
 menu, ol, ul {
   list-style: none;
@@ -136,6 +142,8 @@ table {
   padding: 30px 200px;
   background-color: #fff;
   font-family: "Afacad Flux";
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  z-index: 999;
 }
 .main-header img {
   height: 36px;
@@ -235,11 +243,11 @@ table {
   font-family: "Afacad Flux";
 }
 .care-part p {
-  margin: 0;
   padding-left: 200px;
   color: white;
   font-family: "Afacad Flux";
   font-weight: 100;
+  line-height: 90px;
 }
 .care-part p:first-child {
   font-size: 90px;
@@ -247,7 +255,7 @@ table {
 .care-part p:nth-child(2) {
   font-size: 90px;
   font-weight: 900;
-  margin: 10px 0;
+  margin-bottom: 50px;
 }
 .care-part p:nth-child(3) {
   font-size: 20px;
@@ -972,4 +980,118 @@ iframe {
 }
 .contact-section .contact-info p .icon {
   font-size: 20px;
+}
+
+.register {
+  text-align: center;
+  margin-top: 100px;
+}
+.register img {
+  width: 400px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.register-form {
+  padding-top: 10px;
+  font-family: "Afacad Flux";
+  font-size: 30px;
+  width: 50%;
+  margin-left: 25%;
+  border-radius: 10px;
+  text-align: center;
+  color: #191D34;
+  font-weight: 500;
+  margin-bottom: 200px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.register-form input {
+  background-color: #FF7B3D;
+  color: #191D34;
+  border: none;
+  border-radius: 5px;
+  margin: 12px;
+  width: 60%;
+  margin-left: 20px;
+  height: 35px;
+  font-size: 24px;
+}
+.register-form input:focus {
+  border: 1px solid #191D34;
+}
+.register-form label {
+  margin: 6px;
+}
+.register-form button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 25%;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #191D34;
+  color: #FF7B3D;
+  font-size: 25px;
+  font-weight: 900;
+  border: none;
+}
+.register-form button:hover {
+  background-color: #FF7B3D;
+  color: #191D34;
+}
+
+.login {
+  text-align: center;
+  margin-top: 100px;
+}
+.login img {
+  width: 400px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.login-form {
+  padding-top: 10px;
+  font-family: "Afacad Flux";
+  font-size: 30px;
+  width: 50%;
+  margin-left: 25%;
+  border-radius: 10px;
+  text-align: center;
+  color: #191D34;
+  font-weight: 500;
+  margin-bottom: 200px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.login-form input {
+  background-color: #FF7B3D;
+  color: #191D34;
+  border: none;
+  border-radius: 5px;
+  margin: 12px;
+  width: 60%;
+  margin-left: 20px;
+  height: 35px;
+  font-size: 24px;
+}
+.login-form input:focus {
+  border: 1px solid #191D34;
+}
+.login-form label {
+  margin: 6px;
+}
+.login-form button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 25%;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #191D34;
+  color: #FF7B3D;
+  font-size: 25px;
+  font-weight: 900;
+  border: none;
+}
+.login-form button:hover {
+  background-color: #FF7B3D;
+  color: #191D34;
 }/*# sourceMappingURL=main.css.map */

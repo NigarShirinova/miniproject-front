@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "username": "user1",
+      "gmail": "user1@gmail.com",
+      "password": "password123",
+      "id": "eb74"
+    },
+    {
+      "username": "user2",
+      "gmail": "user2@gmail.com",
+      "password": "password456",
+      "id": "4b80"
+    },
+    {
+      "id": "9ec9",
+      "username": "user4",
+      "email": "user4@gmail.com",
+      "password": "user123"
+    }
+  ],
+  "blogs": []
+}
