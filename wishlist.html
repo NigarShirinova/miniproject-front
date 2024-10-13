@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Wishlist</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #F7FAF9;
+            font-family: Arial, sans-serif;
+            color: #2F4F2F;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #1B3A25;
+        }
+        #wishlistContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .wishlist-card {
+            background-color: #E6F0DC;
+            border: 1px solid green;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 250px;
+            transition: transform 0.2s;
+        }
+        .wishlist-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .wishlist-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Wishlist</h1>
+    <div id="wishlistContainer"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const wishlistContainer = document.getElementById("wishlistContainer");
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+            if (wishlist.length === 0) {
+                wishlistContainer.innerHTML = "<p>Your wishlist is empty.</p>";
+                return;
+            }
+
+            wishlist.forEach(blog => {
+                const cardElement = document.createElement("div");
+                cardElement.className = "wishlist-card";
+                cardElement.innerHTML = `
+                    <h3>${blog.title}</h3>
+                    <p>Description: ${blog.description}</p>
+                    <p>Category: ${blog.category}</p>
+                    <img src="${blog.image}" alt="${blog.title}">
+                    <button class="remove-btn" data-id="${blog.id}">Remove from Wishlist</button>
+                `;
+                wishlistContainer.appendChild(cardElement);
+            });
+
+            // Remove from wishlist functionality
+            document.querySelectorAll('.remove-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const id = e.target.getAttribute('data-id');
+                    wishlist = wishlist.filter(item => item.id !== id);
+                    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+                    e.target.closest('.wishlist-card').remove();
+                    if (wishlist.length === 0) {
+                        wishlistContainer.innerHTML = "<p>Your wishlist is empty.</p>";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

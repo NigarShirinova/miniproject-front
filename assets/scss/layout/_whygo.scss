@@ -1,55 +1,104 @@
-.whygo{
+.whygo {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 150px;
-    height: 600px;
+    height: 1000px;
     background: url('https://preview.colorlib.com/theme/anipat/img/banner/contact_bg.png') no-repeat;  
     text-align: center;
     background-size: contain;
     font-family: 'Afacad Flux';
     width: 100%;
-    justify-content: center;
-    
-        .why{
+
+    .why {
+        font-weight: 600;
+        font-size: 80px;
+        color: aliceblue;
+        margin: 0 auto;
+    }
+
+    .context {
+        width: 50%;
+        
+        line-height: 1.5;
+        font-weight: 300;
+        font-size: 30px;
+        color: aliceblue;
+    }
+
+    p {
+        color: aliceblue;
+        font-size: 20px;
+        b {
             font-weight: 600;
-            font-size: 80px ;
-            color: aliceblue;
-            margin: 0 auto;
-            justify-content: center;
-            
-        }
-        .context{
-            width: 50%;
-            margin-top: 40px;
-            line-height: 1.5;
-            font-weight: 300;
-            font-size: 30px;
-            color: aliceblue;
-        }
-        p{
-            color: aliceblue;
-            font-size: 20px;
-            b{
-                font-weight: 600;
-            }
-        }
-        button {
-            font-family: 'Afacad Flux';
-          background-color: white;
-          color: #dc3545; 
-          font-size: 18px;
-          padding: 18px 60px;
-          border: none;
-          border-radius: 30px;
-          cursor: pointer;
-          margin-bottom: 2px;
-          transition: background-color 0.3s ease;
-          margin-top: 25px;
-          &:hover {
-            background-color: red;
-            color: white;
-          }
         }
     }
+
+    button {
+        font-family: 'Afacad Flux';
+        background-color: white;
+        color: #dc3545; 
+        font-size: 18px;
+        padding: 18px 60px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        margin-bottom: 2px;
+        transition: background-color 0.3s ease;
+        margin-top: 25px;
+        margin-bottom: 25%;
+
+        &:hover {
+            background-color: red;
+            color: white;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .whygo {
+        height: auto;
+        padding: 50px 20px;
+
+        .why {
+            font-size: 60px;
+        }
+
+        .context {
+            width: 80%;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 15px 40px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .whygo {
+        .why {
+            font-size: 40px;
+        }
+
+        .context {
+            width: 90%;
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        button {
+            font-size: 14px;
+            padding: 12px 30px;
+        }
+    }
+}

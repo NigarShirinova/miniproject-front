@@ -48,7 +48,8 @@ export async function postData(url, endpoint, payload) {
 //check user
 export async function checkUser() {
   if (!localStorage.getItem("user")) {
-    localStorage.setItem("user", null);
+    return false;
+    
   }
 
   const userId = JSON.parse(localStorage.getItem("user"));
@@ -58,4 +59,16 @@ export async function checkUser() {
 
   if (user.length > 0) return user[0];
   else return false;
+}
+
+
+export async function updateData(url, endpoint, id, payload) {
+  try {
+    const response = await axios.put(`${url}${endpoint}/${id}`, payload);
+    console.log("STATUS CODE: ", response.status);
+    return response.data; // Return the response data, if applicable
+  } catch (error) {
+    console.error(error.message);
+    throw error; // Optional: rethrow the error if you want to handle it elsewhere
+  }
 }

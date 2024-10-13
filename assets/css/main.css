@@ -178,21 +178,6 @@ table {
 .main-header ul.pages p a:hover:after {
   width: 100%;
 }
-.main-header .hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-  cursor: pointer;
-}
-.main-header .hamburger span {
-  width: 30px;
-  height: 3px;
-  background-color: #1a2b48;
-  transition: background-color 0.3s;
-}
-.main-header .hamburger:hover span {
-  background-color: #dc3545;
-}
 @media (max-width: 1024px) {
   .main-header {
     padding: 30px 100px;
@@ -206,27 +191,19 @@ table {
 }
 @media (max-width: 768px) {
   .main-header {
-    padding: 30px 50px;
+    padding: 30px 20px;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .main-header ul.pages {
-    display: none;
-  }
-  .main-header .hamburger {
-    display: flex;
-  }
-  .main-header.menu-open ul.pages {
-    display: flex;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
     flex-direction: column;
-    background-color: #fff;
-    padding: 20px 0;
-    gap: 20px;
+    margin-top: 20px;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 0;
   }
-  .main-header.menu-open ul.pages p {
-    text-align: center;
+  .main-header p {
+    font-size: 18px;
   }
 }
 
@@ -242,6 +219,7 @@ table {
   background-size: contain;
   font-family: "Afacad Flux";
 }
+
 .care-part p {
   padding-left: 200px;
   color: white;
@@ -249,14 +227,17 @@ table {
   font-weight: 100;
   line-height: 90px;
 }
+
 .care-part p:first-child {
   font-size: 90px;
 }
+
 .care-part p:nth-child(2) {
   font-size: 90px;
   font-weight: 900;
   margin-bottom: 50px;
 }
+
 .care-part p:nth-child(3) {
   font-size: 20px;
   width: 50%;
@@ -264,6 +245,7 @@ table {
   margin-bottom: 20px;
   font-weight: 300;
 }
+
 .care-part p:nth-child(4) {
   font-size: 20px;
   width: 50%;
@@ -271,6 +253,7 @@ table {
   line-height: 1;
   margin-bottom: 20px;
 }
+
 .care-part button {
   font-family: "Afacad Flux";
   background-color: white;
@@ -284,17 +267,99 @@ table {
   margin-left: 200px;
   margin-top: 25px;
 }
+
 .care-part button:hover {
   background-color: red;
   color: white;
 }
+
 .care-part img {
   position: absolute;
   bottom: -300px;
-  right: 120px;
+  right: 10%;
   width: 800px;
 }
 
+@media (max-width: 1024px) {
+  .care-part {
+    text-align: center;
+    padding: 20px;
+    height: auto;
+    background-size: cover;
+  }
+  .care-part p {
+    margin: 0 auto;
+    padding-left: 0;
+    text-align: center;
+    line-height: normal;
+  }
+  .care-part p:first-child,
+  .care-part p:nth-child(2) {
+    font-size: 50px;
+  }
+  .care-part p:nth-child(3),
+  .care-part p:nth-child(4) {
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .care-part button {
+    margin-left: 0;
+    align-self: center;
+  }
+  .care-part img {
+    display: none;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) {
+  .care-part {
+    text-align: center;
+    padding: 20px;
+    height: auto;
+    background-size: cover;
+  }
+  .care-part img {
+    display: none;
+  }
+  .care-part p {
+    margin: 0 auto;
+    padding-left: 0;
+    text-align: center;
+    line-height: normal;
+  }
+  .care-part p:first-child,
+  .care-part p:nth-child(2) {
+    font-size: 50px;
+  }
+  .care-part p:nth-child(3),
+  .care-part p:nth-child(4) {
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .care-part button {
+    margin-left: 0;
+    align-self: center;
+  }
+  .care-part img {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .care-part {
+    text-align: center;
+  }
+  .care-part p:first-child,
+  .care-part p:nth-child(2) {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 40px;
+  }
+  .care-part p:nth-child(3),
+  .care-part p:nth-child(4) {
+    font-size: 14px;
+  }
+}
 .services h3 {
   text-align: center;
   font-size: 60px;
@@ -329,7 +394,7 @@ table {
   flex-direction: column;
   padding: 50px 60px;
   border-radius: 12px;
-  transition: width 1sn;
+  transition: width 1s;
 }
 .services .cards .card img {
   width: 200px;
@@ -347,6 +412,51 @@ table {
   border: none;
 }
 
+@media (max-width: 1200px) {
+  .services h3 {
+    font-size: 50px;
+  }
+  .services p {
+    font-size: 18px;
+  }
+  .services .cards {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .services .cards .card {
+    width: 30%;
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 768px) {
+  .services h3 {
+    font-size: 40px;
+  }
+  .services p {
+    font-size: 16px;
+  }
+  .services .cards {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .services .cards .card {
+    width: 45%;
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .services h3 {
+    font-size: 30px;
+  }
+  .services p {
+    font-size: 14px;
+  }
+  .services .cards .card {
+    width: 90%;
+    margin-bottom: 50px;
+    padding: 15px;
+  }
+}
 .wecare {
   margin-top: 200px;
   display: flex;
@@ -394,6 +504,79 @@ table {
   font-weight: 500;
 }
 
+@media (max-width: 1200px) {
+  .wecare .image {
+    margin-left: 50px;
+    height: auto;
+  }
+  .wecare .text {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .wecare .text h5 {
+    font-size: 50px;
+  }
+  .wecare .text h4 {
+    font-size: 50px;
+  }
+  .wecare .text p {
+    font-size: 18px;
+  }
+  .wecare .text button {
+    font-size: 18px;
+    padding: 12px 30px;
+  }
+}
+@media (max-width: 950px) {
+  .wecare {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .wecare {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .wecare .image {
+    margin-left: 0;
+    margin: 0 auto;
+    height: auto;
+  }
+  .wecare .text {
+    margin: 20px;
+  }
+  .wecare .text h5 {
+    font-size: 40px;
+  }
+  .wecare .text h4 {
+    font-size: 40px;
+  }
+  .wecare .text p {
+    font-size: 16px;
+  }
+  .wecare .text button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .wecare .image {
+    height: 300px;
+  }
+  .wecare .text h5 {
+    font-size: 30px;
+  }
+  .wecare .text h4 {
+    font-size: 30px;
+  }
+  .wecare .text p {
+    font-size: 14px;
+  }
+  .wecare .text button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
 .content {
   margin-top: 300px;
 }
@@ -574,7 +757,7 @@ a {
 
 .slider-container {
   max-width: 1000px;
-  margin: 200px;
+  margin: 200px auto;
   position: relative;
   overflow: hidden;
   background: #fff;
@@ -591,10 +774,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 60px 30px;
   opacity: 0.3;
   transition: opacity 0.4s ease-in-out;
 }
@@ -641,6 +821,57 @@ a {
   color: #333;
 }
 
+@media (max-width: 768px) {
+  .slider-container {
+    margin: 100px auto;
+  }
+  .slider-container .slide {
+    padding: 40px 20px;
+  }
+  .slider-container .slide .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+  .slider-container .slide .testimonial-content h3 {
+    font-size: 20px;
+  }
+  .slider-container .slide .testimonial-content h4 {
+    font-size: 18px;
+  }
+  .slider-container .slide .testimonial-content p {
+    font-size: 22px;
+  }
+  .slider-container .navigation {
+    padding: 0 10px;
+  }
+  .slider-container .navigation .nav-button {
+    font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .slider-container {
+    margin: 50px auto;
+  }
+  .slider-container .slide {
+    padding: 30px 10px;
+  }
+  .slider-container .slide .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+  .slider-container .slide .testimonial-content h3 {
+    font-size: 18px;
+  }
+  .slider-container .slide .testimonial-content h4 {
+    font-size: 16px;
+  }
+  .slider-container .slide .testimonial-content p {
+    font-size: 20px;
+  }
+  .slider-container .navigation .nav-button {
+    font-size: 18px;
+  }
+}
 .ourteam {
   font-family: "Afacad Flux";
   text-align: center;
@@ -765,24 +996,21 @@ a {
   align-items: center;
   justify-content: center;
   margin-top: 150px;
-  height: 600px;
+  height: 1000px;
   background: url("https://preview.colorlib.com/theme/anipat/img/banner/contact_bg.png") no-repeat;
   text-align: center;
   background-size: contain;
   font-family: "Afacad Flux";
   width: 100%;
-  justify-content: center;
 }
 .whygo .why {
   font-weight: 600;
   font-size: 80px;
   color: aliceblue;
   margin: 0 auto;
-  justify-content: center;
 }
 .whygo .context {
   width: 50%;
-  margin-top: 40px;
   line-height: 1.5;
   font-weight: 300;
   font-size: 30px;
@@ -807,12 +1035,49 @@ a {
   margin-bottom: 2px;
   transition: background-color 0.3s ease;
   margin-top: 25px;
+  margin-bottom: 25%;
 }
 .whygo button:hover {
   background-color: red;
   color: white;
 }
 
+@media (max-width: 768px) {
+  .whygo {
+    height: auto;
+    padding: 50px 20px;
+  }
+  .whygo .why {
+    font-size: 60px;
+  }
+  .whygo .context {
+    width: 80%;
+    font-size: 24px;
+  }
+  .whygo p {
+    font-size: 18px;
+  }
+  .whygo button {
+    font-size: 16px;
+    padding: 15px 40px;
+  }
+}
+@media (max-width: 480px) {
+  .whygo .why {
+    font-size: 40px;
+  }
+  .whygo .context {
+    width: 90%;
+    font-size: 20px;
+  }
+  .whygo p {
+    font-size: 16px;
+  }
+  .whygo button {
+    font-size: 14px;
+    padding: 12px 30px;
+  }
+}
 footer {
   background-color: #f9f9f9;
   padding: 40px 0;
@@ -1025,7 +1290,7 @@ iframe {
 .register-form button {
   margin-top: 15px;
   margin-bottom: 15px;
-  width: 25%;
+  width: 50%;
   height: 50px;
   border-radius: 20px;
   background-color: #191D34;
@@ -1094,4 +1359,115 @@ iframe {
 .login-form button:hover {
   background-color: #FF7B3D;
   color: #191D34;
+}
+
+a {
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.blog-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+.blog-container #search-input {
+  margin-top: 50px;
+  width: 100%;
+  height: 20%;
+  background-color: peachpuff;
+  border: none;
+  border-radius: 10px;
+  font-size: 25px;
+  font-family: "Afacad Flux";
+}
+.blog-container #category-filter {
+  margin-top: 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "Afacad Flux";
+  background-color: peachpuff;
+}
+.blog-container #category-filter option {
+  background-color: palegoldenrod;
+  font-size: 20px;
+  font-family: "Afacad Flux";
+}
+
+.blog-card {
+  font-family: "Afacad Flux";
+  margin-bottom: 100px;
+  margin-top: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 40%;
+  margin-left: 10%;
+  height: auto;
+  display: block;
+}
+.blog-card:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+.blog-card .blog-image {
+  position: relative;
+}
+.blog-card .blog-image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.blog-card .blog-image .blog-date {
+  position: absolute;
+  top: 80%;
+  left: 30px;
+  background-color: #ff5722;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+}
+.blog-card .blog-image .blog-date .date-day {
+  font-size: 30px;
+  font-weight: bold;
+}
+.blog-card .blog-image .blog-date .date-month {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.blog-card .blog-content {
+  padding: 20px;
+}
+.blog-card .blog-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+.blog-card .blog-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #777;
+  margin-bottom: 15px;
+}
+.blog-card .blog-content .blog-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #888;
+}
+.blog-card .blog-content .blog-meta .blog-category, .blog-card .blog-content .blog-meta .blog-comments {
+  display: flex;
+  align-items: center;
+}
+.blog-card .blog-content .blog-meta .blog-category i, .blog-card .blog-content .blog-meta .blog-comments i {
+  margin-right: 5px;
 }/*# sourceMappingURL=main.css.map */

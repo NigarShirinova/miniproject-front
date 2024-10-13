@@ -1,6 +1,6 @@
 .slider-container {
     max-width: 1000px;
-    margin: 200px;
+    margin: 200px auto;
     position: relative;
     overflow: hidden;
     background: #fff;
@@ -17,10 +17,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding-top: 60px;
-            padding-bottom: 60px;
-            padding-left: 30px;
-            padding-right: 30px;
+            padding: 60px 30px;
 
             opacity: 0.3;
             transition: opacity 0.4s ease-in-out;
@@ -71,6 +68,74 @@
 
             &:hover {
                 color: #333;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        margin: 100px auto;
+
+        .slide {
+            padding: 40px 20px;
+
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .testimonial-content {
+                h3 {
+                    font-size: 20px;
+                }
+                h4 {
+                    font-size: 18px;
+                }
+                p {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .navigation {
+            padding: 0 10px;
+
+            .nav-button {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-container {
+        margin: 50px auto;
+
+        .slide {
+            padding: 30px 10px;
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .testimonial-content {
+                h3 {
+                    font-size: 18px;
+                }
+                h4 {
+                    font-size: 16px;
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .navigation {
+            .nav-button {
+                font-size: 18px;
             }
         }
     }

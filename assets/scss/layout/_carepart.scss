@@ -1,74 +1,170 @@
 .care-part {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 50px;
-    height: 610px;
-    background: url('https://preview.colorlib.com/theme/anipat/img/banner/banner.png.webp') no-repeat;  
-    overflow: visible;
-    background-size: contain;
-    font-family: 'Afacad Flux';
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 50px;
+  height: 610px;
+  background: url('https://preview.colorlib.com/theme/anipat/img/banner/banner.png.webp') no-repeat;  
+  overflow: visible;
+  background-size: contain;
+  font-family: 'Afacad Flux';
+}
+
+.care-part p {
+  padding-left: 200px;
+  color: white;
+  font-family: 'Afacad Flux';
+  font-weight: 100;
+  line-height: 90px;
+}
+
+.care-part p:first-child {
+  font-size: 90px;
+}
+
+.care-part p:nth-child(2) {
+  font-size: 90px;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+
+.care-part p:nth-child(3) {
+  font-size: 20px;
+  width: 50%;
+  line-height: 1;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.care-part p:nth-child(4) {
+  font-size: 20px;
+  width: 50%;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.care-part button {
+  font-family: 'Afacad Flux';
+  background-color: white;
+  color: #dc3545;
+  font-size: 18px;
+  padding: 18px 60px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 200px;
+  margin-top: 25px;
+}
+
+.care-part button:hover {
+  background-color: red;
+  color: white;
+}
+
+.care-part img {
+  position: absolute;
+  bottom: -300px;
+  right: 10%;
+  width: 800px;
+}
+
+@media (max-width: 1024px) {
+  .care-part {
     
+    text-align: center;
+  
+    padding: 20px;
+    height: auto;
+    background-size: cover;
+}
 
-    p {
-      
-      padding-left: 200px;
-      color: white;
-      font-family: 'Afacad Flux';
-      font-weight: 100;
-      line-height: 90px;
-      &:first-child {
-        font-size: 90px;
-      }
-  
-      &:nth-child(2) {
-        font-size: 90px;
-        font-weight:900;
-        margin-bottom: 50px;
-      }
-  
-      &:nth-child(3) {
-        font-size: 20px;
-        width: 50%;
-        line-height: 1;
-        margin-bottom: 20px;
-        font-weight: 300;
-      }
-      &:nth-child(4) {
-        font-size: 20px;
-        width: 50%;
-        font-weight: 300;
-        line-height: 1;
-        margin-bottom: 20px;
-      }
-    }
-  
-    button {
-        font-family: 'Afacad Flux';
-      background-color: white;
-      color: #dc3545; 
-      font-size: 18px;
-      padding: 18px 60px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-left: 200px;
-      margin-top: 25px;
-      &:hover {
-        background-color: red;
-        color: white;
-      }
-    }
-  
-    img {
-      position: absolute;
-      bottom: -300px;
-      right: 120px;
-      width: 800px; 
-      
-    }
+.care-part p {
+  margin: 0 auto;
+    padding-left: 0;
+    text-align: center;
+    line-height: normal;
+}
 
+.care-part p:first-child,
+.care-part p:nth-child(2) {
+    font-size: 50px;
+}
+
+.care-part p:nth-child(3),
+.care-part p:nth-child(4) {
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.care-part button {
+    margin-left: 0;
+    align-self: center;
+}
+
+.care-part img {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+  .care-part {
+    
+    img{
+      display: none;
+    }
+      text-align: center;
+    
+      padding: 20px;
+      height: auto;
+      background-size: cover;
+  }
+
+  .care-part p {
+    margin: 0 auto;
+      padding-left: 0;
+      text-align: center;
+      line-height: normal;
+  }
+
+  .care-part p:first-child,
+  .care-part p:nth-child(2) {
+      font-size: 50px;
+  }
+
+  .care-part p:nth-child(3),
+  .care-part p:nth-child(4) {
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .care-part button {
+      margin-left: 0;
+      align-self: center;
   }
   
+  .care-part img {
+      display: none;
+  }
+}
+}
+@media (max-width: 480px) {
+  .care-part{
+    text-align: center;
+  }
+  .care-part p:first-child,
+  .care-part p:nth-child(2) {
+    margin: 0 auto;
+    text-align: center;
+      font-size: 40px;
+  }
+
+  .care-part p:nth-child(3),
+  .care-part p:nth-child(4) {
+      font-size: 14px;
+  }
+}

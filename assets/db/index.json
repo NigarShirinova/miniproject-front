@@ -1,23 +1,23 @@
 {
   "users": [
     {
+      "id": "8953",
       "username": "user1",
-      "gmail": "user1@gmail.com",
-      "password": "password123",
-      "id": "eb74"
-    },
-    {
-      "username": "user2",
-      "gmail": "user2@gmail.com",
-      "password": "password456",
-      "id": "4b80"
-    },
-    {
-      "id": "9ec9",
-      "username": "user4",
-      "email": "user4@gmail.com",
-      "password": "user123"
+      "email": "user1@gmail.com",
+      "password": "salam123"
     }
   ],
-  "blogs": []
+  "blogs": [
+    {
+      "title": "How AI are transforming healthcare in 2024",
+      "category": "Technology, Health",
+      "image": "path/to/your/image5.jpg",
+      "description": "Artificial Intelligence is revolutionizing healthcare, from diagnostics to personalized medicine. Explore the latest trends in AI-driven healthcare.",
+      "date": {
+        "day": "28",
+        "month": "May"
+      },
+      "id": "5"
+    }
+  ]
 }
